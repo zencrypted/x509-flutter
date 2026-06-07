@@ -48,6 +48,7 @@
 		076B80ED05E646CB81CD68E6 /* UsefulDefinitions_OIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F58EF0A2A95C0DC593832 /* UsefulDefinitions_OIDs.swift */; };
 		0800FA09FFDD07D2A88C0BD4 /* InformationFramework_id_oa_collectiveAttributeSubentryList_oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E10646FA9DFF646E7A243E /* InformationFramework_id_oa_collectiveAttributeSubentryList_oid.swift */; };
 		081DCD3DB7A6FD68ED8AC6CD /* PKIXAlgs_2009_sect409k1_oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED507B1EFE0185064011C7E /* PKIXAlgs_2009_sect409k1_oid.swift */; };
+		08D0022B8422BCD06642B3CA /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1B3C9A3F599C0235D83027 /* Pods_Runner.framework */; };
 		08D1C82FD71B17AAA8A76DAC /* CHAT_Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC33155BBF248D6BD47DF1 /* CHAT_Feature.swift */; };
 		093A8B25C8A76B4F4059DB2B /* CHAT_History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7D0C442A8AC4E1634D5B /* CHAT_History.swift */; };
 		098507B6A6843A47CE71C5C0 /* SelectedAttributeTypes_id_at_encryptedAttributeCertificate_oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976E13BE822E479E4B521F44 /* SelectedAttributeTypes_id_at_encryptedAttributeCertificate_oid.swift */; };
@@ -909,6 +910,7 @@
 		C8B16EFA9E94EE0538EC601C /* SelectedAttributeTypes_id_pr_unsupportedMatchingUse_oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60132F748BA3A6D8FCA7E16B /* SelectedAttributeTypes_id_pr_unsupportedMatchingUse_oid.swift */; };
 		C8F8041232824BDD2D9774AB /* InformationFramework_AttributeValueAssertion_assertedContexts_Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3020C15CC1D8619BF22047 /* InformationFramework_AttributeValueAssertion_assertedContexts_Choice.swift */; };
 		C8FAABA3CF7180EB42ACD4E1 /* InformationFramework_id_oa_excludeAllCollectiveAttributes_oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABBB55A9E409649A7FE029D /* InformationFramework_id_oa_excludeAllCollectiveAttributes_oid.swift */; };
+		C92CC84A02C05800398649FD /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC346C8C3B49A709F41E58EB /* Pods_RunnerTests.framework */; };
 		C9852AA1F141492768B87DDE /* AuthenticationFramework_SubjectPublicKeyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91404CD544F563F7F2601DDC /* AuthenticationFramework_SubjectPublicKeyInfo.swift */; };
 		C9A6DAE6612C00533B4E202A /* SelectedAttributeTypes_TimeSpecification_time_Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8BDDF7F3A8E846C41B114C /* SelectedAttributeTypes_TimeSpecification_time_Choice.swift */; };
 		CA246D39DFB6B96230EBA63C /* SelectedAttributeTypes_id_pr_searchAttributeCombinationViolation_oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A15C4D3F40B077EFEF8E1B /* SelectedAttributeTypes_id_pr_searchAttributeCombinationViolation_oid.swift */; };
@@ -1427,6 +1429,7 @@
 		3B044B4E1A960CE3FF91A615 /* CertificateExtensions_PolicyConstraintsSyntax.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CertificateExtensions_PolicyConstraintsSyntax.swift; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		3B862A03AE2375AE074137DE /* SelectedAttributeTypes_id_at_encryptedUniqueIdentifier_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_encryptedUniqueIdentifier_oid.swift; sourceTree = "<group>"; };
+		3BA8DC29534EBFD9C696790D /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		3BCD30460C7315B2C129597A /* CryptographicMessageSyntax_2009_SigningTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2009_SigningTime.swift; sourceTree = "<group>"; };
 		3BF963F3AFADE2EF6ED79D42 /* SelectedAttributeTypes_id_pr_searchSubsetViolation_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_pr_searchSubsetViolation_oid.swift; sourceTree = "<group>"; };
 		3C0265A97D1F627EB62EF861 /* InformationFramework_ContextAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/InformationFramework_ContextAssertion.swift; sourceTree = "<group>"; };
@@ -1562,6 +1565,7 @@
 		58D77AB3DAF5210402FE4CA9 /* PKIXAlgs_2009_secp384r1_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIXAlgs_2009_secp384r1_oid.swift; sourceTree = "<group>"; };
 		594A0F7A98462EFFED222675 /* TimeUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeUtilities.swift; path = "SwiftASN1/Basic ASN1 Types/TimeUtilities.swift"; sourceTree = "<group>"; };
 		59679B0B70593D482A5EB43D /* PKIX1Implicit88_AccessDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIX1Implicit88_AccessDescription.swift; sourceTree = "<group>"; };
+		59741D700529BABC2F8920C7 /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
 		59941F529817653D8079C699 /* SelectedAttributeTypes_Period_months_Choice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_Period_months_Choice.swift; sourceTree = "<group>"; };
 		5A73DF92C364C244A581583C /* ANSI_X9_62_ansix9t193r1_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_62_ansix9t193r1_oid.swift; sourceTree = "<group>"; };
 		5A99FA3ADC6727F9530F54B5 /* SelectedAttributeTypes_id_at_encryptedEnhancedSearchGuide_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_encryptedEnhancedSearchGuide_oid.swift; sourceTree = "<group>"; };
@@ -1638,6 +1642,7 @@
 		68E3778EAD832B8021E89B9D /* SelectedAttributeTypes_PreferredDeliveryMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_PreferredDeliveryMethod.swift; sourceTree = "<group>"; };
 		68E6ECFBAD2EC046D56EFF4B /* SelectedAttributeTypes_id_not_contextTypeList_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_not_contextTypeList_oid.swift; sourceTree = "<group>"; };
 		68EBBAE41D08E90D55AD2086 /* PKIX1Implicit88_RelativeDistinguishedName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIX1Implicit88_RelativeDistinguishedName.swift; sourceTree = "<group>"; };
+		68FFD2BB83ED84C196DA139B /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		695D45A55C1DB0F1B49D1B36 /* ANSI_X9_62_ansix9t571k1_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_62_ansix9t571k1_oid.swift; sourceTree = "<group>"; };
 		697F8CFFB0ADB1CB4764A409 /* SelectedAttributeTypes_id_at_encryptedUniqueMember_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_encryptedUniqueMember_oid.swift; sourceTree = "<group>"; };
 		699F153AB31D45E110BECCED /* CryptographicMessageSyntax_2009_KEKRecipientInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2009_KEKRecipientInfo.swift; sourceTree = "<group>"; };
@@ -1687,6 +1692,7 @@
 		71155D57A9A57C2E7C597418 /* CHAT_MUC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CHAT_MUC.swift; sourceTree = "<group>"; };
 		715FB76ADBD527C1DDCCCFA7 /* PKIXAlgs_2009_Curve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIXAlgs_2009_Curve.swift; sourceTree = "<group>"; };
 		71C3A90019E730781005D067 /* AuthenticationFramework_CertificateList_toBeSigned_revokedCertificates_Sequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/AuthenticationFramework_CertificateList_toBeSigned_revokedCertificates_Sequence.swift; sourceTree = "<group>"; };
+		71DC47453FD29D33C4B36894 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7210A156717E15F5557F05E2 /* ANSI_X9_62_ansix9t233r1_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_62_ansix9t233r1_oid.swift; sourceTree = "<group>"; };
 		72CA5F2F4EE40F17E2B5BACA /* AuthenticationFramework_AttributeCertificationPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/AuthenticationFramework_AttributeCertificationPath.swift; sourceTree = "<group>"; };
 		731CA76A84D78C785DD6C39B /* SelectedAttributeTypes_id_pr_searchContextValueRequired_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_pr_searchContextValueRequired_oid.swift; sourceTree = "<group>"; };
@@ -1882,6 +1888,7 @@
 		9A9C3E3F6966DF96C8CFE476 /* InformationFramework_id_oa_modifiersName_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/InformationFramework_id_oa_modifiersName_oid.swift; sourceTree = "<group>"; };
 		9AC174B71AFD0502B7A6549A /* CryptographicMessageSyntax_2009_OriginatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2009_OriginatorInfo.swift; sourceTree = "<group>"; };
 		9AD24BE62CAC359820B0C906 /* SelectedAttributeTypes_id_at_initials_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_initials_oid.swift; sourceTree = "<group>"; };
+		9AF46C0857C7DDCD3C7348E3 /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9BCEDDC4E50891314AA20EB2 /* PKIX1Explicit88_ORAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIX1Explicit88_ORAddress.swift; sourceTree = "<group>"; };
 		9C33DE745CCFD8D53E722C98 /* SelectedAttributeTypes_id_at_roleOccupant_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_roleOccupant_oid.swift; sourceTree = "<group>"; };
 		9C6C36193AE642B5C317155F /* ANSI_X9_42_numberType_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_42_numberType_oid.swift; sourceTree = "<group>"; };
@@ -2068,6 +2075,7 @@
 		C8014B65AA6A264CF98A2572 /* SelectedAttributeTypes_id_at_encryptedPostOfficeBox_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_encryptedPostOfficeBox_oid.swift; sourceTree = "<group>"; };
 		C833D18986096BD886984751 /* SelectedAttributeTypes_id_cat_characterMatchTypes_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_cat_characterMatchTypes_oid.swift; sourceTree = "<group>"; };
 		C83BA3A9D74832932129284F /* CryptographicMessageSyntax_2009_ContentEncryptionAlgorithmIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2009_ContentEncryptionAlgorithmIdentifier.swift; sourceTree = "<group>"; };
+		C83F3F2C1C525F01EC63E396 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		C8437A38F85AFCEC53293826 /* PKIX1Implicit88_KeyIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIX1Implicit88_KeyIdentifier.swift; sourceTree = "<group>"; };
 		C8B95DF6183B4E218C1F967D /* CMSECCAlgs_2009_02_ECC_CMS_SharedInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CMSECCAlgs_2009_02_ECC_CMS_SharedInfo.swift; sourceTree = "<group>"; };
 		C8E46750720350DEF15EF91A /* ANSI_X9_62_id_SHA512_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_62_id_SHA512_oid.swift; sourceTree = "<group>"; };
@@ -2082,6 +2090,7 @@
 		CBA927C19A106C19C996EE04 /* SelectedAttributeTypes_id_at_postalAddress_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_postalAddress_oid.swift; sourceTree = "<group>"; };
 		CC1A1AB933A79A7EE3B92985 /* PKIXAlgs_2009_DomainParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIXAlgs_2009_DomainParameters.swift; sourceTree = "<group>"; };
 		CC1D6206E9E216BBC526E3EB /* CHAT_CHATProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CHAT_CHATProtocol.swift; sourceTree = "<group>"; };
+		CC346C8C3B49A709F41E58EB /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA7AE83A7B115F2E0B770B2 /* CryptographicMessageSyntax_2010_OTHER_RECIPIENT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2010_OTHER_RECIPIENT.swift; sourceTree = "<group>"; };
 		CCAE9CA633475E218C86F50A /* PKIX1Implicit88_id_holdinstruction_callissuer_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/PKIX1Implicit88_id_holdinstruction_callissuer_oid.swift; sourceTree = "<group>"; };
 		CD2FCAD02410C37B887A9087 /* InformationFramework_id_oa_creatorsName_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/InformationFramework_id_oa_creatorsName_oid.swift; sourceTree = "<group>"; };
@@ -2287,6 +2296,7 @@
 		FA9783AFD4E005A6464AA13E /* ANSI_X9_62_id_ecPublicKey_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_62_id_ecPublicKey_oid.swift; sourceTree = "<group>"; };
 		FAE81FB2DFEEBC7AA13C93A6 /* CryptographicMessageSyntax_2010_Countersignature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2010_Countersignature.swift; sourceTree = "<group>"; };
 		FB19B69E769A87F0B63C8A3F /* SelectedAttributeTypes_id_at_encryptedTelephoneNumber_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/SelectedAttributeTypes_id_at_encryptedTelephoneNumber_oid.swift; sourceTree = "<group>"; };
+		FB1B3C9A3F599C0235D83027 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3791641BBF3E909C955272 /* ANSI_X9_42_ansi_X9_42_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/ANSI_X9_42_ansi_X9_42_oid.swift; sourceTree = "<group>"; };
 		FB3968021A6E5F08CEF7A9C8 /* CMSAesRsaesOaep_2009_aes_oid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CMSAesRsaesOaep_2009_aes_oid.swift; sourceTree = "<group>"; };
 		FB3EAF474879932F243F70E7 /* CryptographicMessageSyntax_2009_PasswordRecipientInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ASN1/CryptographicMessageSyntax_2009_PasswordRecipientInfo.swift; sourceTree = "<group>"; };
@@ -2308,11 +2318,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		66C89678BBCC05C34A346323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CC84A02C05800398649FD /* Pods_RunnerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97C146EB1CF9000F007C117D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				78A318202AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage in Frameworks */,
+				08D0022B8422BCD06642B3CA /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3437,6 +3456,15 @@
 			path = RunnerTests;
 			sourceTree = "<group>";
 		};
+		3E322DA2B082B535CF756266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB1B3C9A3F599C0235D83027 /* Pods_Runner.framework */,
+				CC346C8C3B49A709F41E58EB /* Pods_RunnerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		76D6CFC7E8AE6D6513711CFC /* SwiftASN1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3481,6 +3509,8 @@
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
+				9944BD3CD12CA0654A878C45 /* Pods */,
+				3E322DA2B082B535CF756266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3513,6 +3543,20 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
+		9944BD3CD12CA0654A878C45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8DC29534EBFD9C696790D /* Pods-Runner.debug.xcconfig */,
+				C83F3F2C1C525F01EC63E396 /* Pods-Runner.release.xcconfig */,
+				68FFD2BB83ED84C196DA139B /* Pods-Runner.profile.xcconfig */,
+				71DC47453FD29D33C4B36894 /* Pods-RunnerTests.debug.xcconfig */,
+				9AF46C0857C7DDCD3C7348E3 /* Pods-RunnerTests.release.xcconfig */,
+				59741D700529BABC2F8920C7 /* Pods-RunnerTests.profile.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3520,8 +3564,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 331C8087294A63A400263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */;
 			buildPhases = (
+				E35F2B10532D9328B73A124A /* [CP] Check Pods Manifest.lock */,
 				331C807D294A63A400263BE5 /* Sources */,
 				331C807F294A63A400263BE5 /* Resources */,
+				66C89678BBCC05C34A346323 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3537,12 +3583,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
+				B90165AF9E621EFA3700A2E8 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+				CE521F041F52B9501343C7E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3650,6 +3698,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+		};
+		B90165AF9E621EFA3700A2E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE521F041F52B9501343C7E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E35F2B10532D9328B73A124A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RunnerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -4901,6 +5010,7 @@
 		};
 		331C8088294A63A400263BE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71DC47453FD29D33C4B36894 /* Pods-RunnerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -4918,6 +5028,7 @@
 		};
 		331C8089294A63A400263BE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AF46C0857C7DDCD3C7348E3 /* Pods-RunnerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -4933,6 +5044,7 @@
 		};
 		331C808A294A63A400263BE5 /* Profile */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59741D700529BABC2F8920C7 /* Pods-RunnerTests.profile.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

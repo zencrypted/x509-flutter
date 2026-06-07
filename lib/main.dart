@@ -1,7 +1,12 @@
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'security/rasp_manager.dart';
+import 'security/hardware_keystore.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await RaspManager.initialize();
   runApp(const MyApp());
 }
 

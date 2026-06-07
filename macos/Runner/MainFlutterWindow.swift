@@ -1,5 +1,8 @@
 import Cocoa
 import FlutterMacOS
+import Foundation
+import CryptoKit
+import LocalAuthentication
 
 class MainFlutterWindow: NSWindow {
   var eventSink: FlutterEventSink?
@@ -26,6 +29,38 @@ class MainFlutterWindow: NSWindow {
       
       let eventChannel = FlutterEventChannel(name: "x509_multicast/events", binaryMessenger: controller.engine.binaryMessenger)
       eventChannel.setStreamHandler(self)
+      
+      let keysChannel = FlutterMethodChannel(name: "x509_multicast/keys", binaryMessenger: controller.engine.binaryMessenger)
+      keysChannel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
+          switch call.method {
+          case "generateKey":
+              guard let args = call.arguments as? [String: Any], let alias = args["alias"] as? String else {
+                  result(FlutterError(code: "INVALID_ARGS", message: "Alias required", details: nil))
+                  return
+              }
+              do {
+                  let success = try HardwareKeyManager.shared.generateKey(alias: alias)
+                  result(success)
+              } catch {
+                  result(FlutterError(code: "KEY_GEN_FAILED", message: error.localizedDescription, details: nil))
+              }
+          case "signData":
+              guard let args = call.arguments as? [String: Any], 
+                    let alias = args["alias"] as? String,
+                    let payloadData = (args["payload"] as? FlutterStandardTypedData)?.data else {
+                  result(FlutterError(code: "INVALID_ARGS", message: "Alias and payload required", details: nil))
+                  return
+              }
+              do {
+                  let signature = try HardwareKeyManager.shared.signData(alias: alias, payload: payloadData)
+                  result(FlutterStandardTypedData(bytes: signature))
+              } catch {
+                  result(FlutterError(code: "SIGN_FAILED", message: error.localizedDescription, details: nil))
+              }
+          default:
+              result(FlutterMethodNotImplemented)
+          }
+      }
       
       // Start streaming MulticastService packets
       Task {
@@ -96,5 +131,75 @@ extension MainFlutterWindow: FlutterStreamHandler {
     func onCancel(withArguments arguments: Any?) -> FlutterError? {
         self.eventSink = nil
         return nil
+    }
+}
+
+class HardwareKeyManager {
+    static let shared = HardwareKeyManager()
+    private init() {}
+    
+    enum KeyError: Error {
+        case generationFailed
+        case signingFailed
+        case keyNotFound
+    }
+    
+    func generateKey(alias: String) throws -> Bool {
+        let accessControl = SecAccessControlCreateWithFlags(
+            nil,
+            kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+            [.privateKeyUsage, .biometryCurrentSet],
+            nil
+        )!
+        
+        do {
+            let privateKey = try SecureEnclave.P256.Signing.PrivateKey(
+                compactRepresentable: false,
+                accessControl: accessControl,
+                authenticationContext: LAContext()
+            )
+            
+            let keyData = privateKey.dataRepresentation
+            
+            let query: [String: Any] = [
+                kSecClass as String: kSecClassGenericPassword,
+                kSecAttrAccount as String: alias,
+                kSecValueData as String: keyData,
+                kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+            ]
+            
+            SecItemDelete(query as CFDictionary)
+            let status = SecItemAdd(query as CFDictionary, nil)
+            
+            return status == errSecSuccess
+        } catch {
+            print("HardwareKeyManager: Failed to generate key - \(error)")
+            throw KeyError.generationFailed
+        }
+    }
+    
+    func signData(alias: String, payload: Data) throws -> Data {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: alias,
+            kSecReturnData as String: true,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+        
+        var item: CFTypeRef?
+        let status = SecItemCopyMatching(query as CFDictionary, &item)
+        
+        guard status == errSecSuccess, let keyData = item as? Data else {
+            throw KeyError.keyNotFound
+        }
+        
+        do {
+            let privateKey = try SecureEnclave.P256.Signing.PrivateKey(dataRepresentation: keyData)
+            let signature = try privateKey.signature(for: payload)
+            return signature.derRepresentation
+        } catch {
+            print("HardwareKeyManager: Failed to sign data - \(error)")
+            throw KeyError.signingFailed
+        }
     }
 }

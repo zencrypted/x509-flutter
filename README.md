@@ -34,16 +34,51 @@
 
 ---
 
-## Getting Started
+## Build Prerequisites
 
-This project is a starting point for a Flutter application.
+To build `x509_flutter` across different platforms, you need to set up the appropriate development environments:
 
-A few resources to get you started if this is your first Flutter project:
+### macOS & iOS
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+* **Xcode**: The latest version installed from the Mac App Store.
+* **CocoaPods**: Required for resolving iOS/macOS dependencies (`freerasp`, etc.).
+  ```bash
+  brew install cocoapods
+  ```
+* *Note: The iOS build requires a physical device for some RASP features, though the app can compile for the simulator.*
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Android
+
+* **Java Development Kit (JDK)**: **Java 17** is the recommended version for compiling the project using Gradle.
+  ```bash
+  brew install openjdk@21
+  export JAVA_HOME=/opt/homebrew/opt/openjdk@21
+  ```
+* **Android SDK**: Requires Android SDK Platform 36 and Build-Tools 28.0.3. If you do not use Android Studio, you can install them via `sdkmanager`:
+  ```bash
+  export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
+  yes | sdkmanager "platforms;android-36" "build-tools;28.0.3"
+  ```
+
+### Linux
+
+To build the Linux desktop application, install the following dependencies (for Debian/Ubuntu-based systems):
+
+```bash
+sudo apt-get update
+sudo apt-get install -y clang cmake git ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
+```
+
+### Windows
+
+To build the Windows desktop application, install **Visual Studio 2022** (not just VS Code) and ensure you include the following workload during installation:
+
+* **Desktop development with C++** (including the MSVC compiler, Windows 10/11 SDK, and C++ CMake tools).
+
+### Build Script
+
+A convenience script is provided to automatically compile obfuscated release builds for Android, iOS, and macOS:
+
+```bash
+./scripts/build_release.sh
+```
