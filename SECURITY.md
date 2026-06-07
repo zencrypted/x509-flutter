@@ -6,7 +6,7 @@
 
 2. Специфікацій протоколу **Buddha Protocol X.422** (`protocol.zencrypted.uk`).
 
-3. Рекомендацій з безпеки Flutter-застосунків від **Cossack Labs**.
+3. Рекомендацій з безпеки Flutter-застосунків від **Cossack Labs** (https://www.cossacklabs.com/blog/flutter-application-security-considerations/).
 
 ---
 
