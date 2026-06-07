@@ -6,7 +6,7 @@
 
 2. Специфікацій протоколу **Buddha Protocol X.422** (`protocol.zencrypted.uk`).
 
-3. Рекомендацій з безпеки Flutter-застосунків від **Cossack Labs**.
+3. Рекомендацій з безпеки Flutter-застосунків від **Cossack Labs** (https://www.cossacklabs.com/blog/flutter-application-security-considerations/).
 
 ---
 
@@ -142,3 +142,4 @@ macOS Native (macos/Runner/MainFlutterWindow.swift)
 * **Обфускація та приховування символів**:
   - Розроблено скрипт релізної збірки `scripts/build_release.sh`.
   - Збірка виконується з обов'язковими прапорцями `--obfuscate` та `--split-debug-info`, що ускладнює реверс-інжиніринг бізнес-логіки та приховує внутрішні класи і функції застосунку.
+=======
