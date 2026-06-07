@@ -78,6 +78,19 @@ class _MulticastHomePageState extends State<MulticastHomePage> {
     }
   }
 
+  // Recommendation: Do not pass unencrypted secret data over Platform Channels.
+  // CMS encryption should happen via FFI (Rust/C) before sending over the channel.
+  Future<void> _sendEncryptedMessage() async {
+    try {
+      // Example FFI call: final encryptedBytes = rustFfi.encryptCmsMessage("Hello Secret!");
+      // We simulate an encrypted CMS byte array payload:
+      final dummyEncryptedPayload = Uint8List.fromList([0x30, 0x0C, 0x06, 0x0A, 0x2A, 0x86, 0x48, 0x86, 0xF7, 0x0D, 0x01, 0x07, 0x01]);
+      await methodChannel.invokeMethod('sendEncryptedMessage', dummyEncryptedPayload);
+    } on PlatformException catch (e) {
+      debugPrint("Failed to send encrypted message: '${e.message}'.");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,8 +102,10 @@ class _MulticastHomePageState extends State<MulticastHomePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            Wrap(
+              spacing: 8.0,
+              runSpacing: 4.0,
+              alignment: WrapAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: _isRunning ? null : _startService,
@@ -103,6 +118,10 @@ class _MulticastHomePageState extends State<MulticastHomePage> {
                 ElevatedButton(
                   onPressed: _isRunning ? _sendPresence : null,
                   child: const Text('Broadcast Presence'),
+                ),
+                ElevatedButton(
+                  onPressed: _isRunning ? _sendEncryptedMessage : null,
+                  child: const Text('Send CMS Payload'),
                 ),
               ],
             ),

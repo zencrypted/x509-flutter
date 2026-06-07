@@ -70,6 +70,17 @@ import UIKit
                   DispatchQueue.main.async { result(false) }
               }
           }
+      case "sendEncryptedMessage":
+          if let typedData = call.arguments as? FlutterStandardTypedData {
+              let payloadData = typedData.data
+              Task {
+                  // Direct send over Multicast Service. Payload is already encrypted CMS (via FFI in Dart)
+                  await MulticastService.shared.send(data: payloadData)
+                  DispatchQueue.main.async { result(true) }
+              }
+          } else {
+              result(FlutterError(code: "INVALID_ARGUMENT", message: "Expected a byte array", details: nil))
+          }
       default:
           result(FlutterMethodNotImplemented)
       }
