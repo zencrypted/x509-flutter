@@ -11,7 +11,7 @@ class HardwareKeystore {
     try {
       final result = await _channel.invokeMethod<bool>('generateKey', {'alias': keyAlias});
       return result ?? false;
-    } on PlatformException catch (e) {
+    } on PlatformException {
       print("generateKey error: \${e.message}");
       return false;
     }
@@ -26,7 +26,7 @@ class HardwareKeystore {
         'payload': payload,
       });
       return result;
-    } on PlatformException catch (e) {
+    } on PlatformException {
       print("signData error: \${e.message}");
       return null;
     }
